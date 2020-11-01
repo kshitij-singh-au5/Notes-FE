@@ -55,7 +55,7 @@ function Form(Counter) {
                         <div className="mt-4 mb-4" style={{ maxWidth: "200px" }}>
                             <Link to={`/${i}`} target="_blank">
 
-                                <a key={i} href={`https://note-be.herokuapp.com/${i}`} target="_blank" rel="noopener noreferrer">{`tiny.cc.${i}`}</a>
+                                <a key={i} href={`https://note-fe.netlify.app/${i}`} target="_blank" rel="noopener noreferrer">{`tiny.cc.${i}`}</a>
 
                             </Link>
                         </div>
