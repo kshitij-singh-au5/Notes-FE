@@ -4,12 +4,14 @@ import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Form from './components/Form'
 import Note from './components/Note'
+import { useSelector } from 'react-redux';
 
 
 function App() {
 
   const [data, setData] = useState([])
   const [count1, setCount] = useState(0)
+  const [haha, setHaha] = useState(0)
 
   const Counter = (count) => {
     setCount(count)
@@ -29,7 +31,7 @@ function App() {
 
     }
     getData();
-
+    setHaha(haha+1)
     // const interval = setInterval(() => { getData() }, 250)
     // return () => { clearInterval(interval) }
   }, [count1, data.length])
