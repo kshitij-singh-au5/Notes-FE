@@ -9,10 +9,10 @@ import Note from './components/Note'
 function App() {
 
   const [data, setData] = useState([])
-  const [count, setCount] = useState(0)
+  const [count1, setCount] = useState(0)
 
   const Counter = (count) => {
-    return setCount(count)
+    setCount(count)
   }
 
   useEffect(() => {
@@ -32,8 +32,8 @@ function App() {
 
     // const interval = setInterval(() => { getData() }, 250)
     // return () => { clearInterval(interval) }
-  }, [count])
-  console.log("counter var", count)
+  }, [count1, data.length])
+  console.log("counter var", count1)
 
   const renderForm = (x) => {
     return (<Form data1={Counter}></Form>)

@@ -16,7 +16,7 @@ function Form(Counter) {
         e.preventDefault();
         setCount(count + 1)
         data1(count + 1)
-        localStorage.setItem('hello', count + 1)
+        // localStorage.setItem('hello', count + 1)
         Axios.post('http://localhost:5000/', { notes: note })
         setNote("")
 
