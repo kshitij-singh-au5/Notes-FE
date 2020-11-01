@@ -17,7 +17,7 @@ function Form(Counter) {
         setCount(count + 1)
         data1(count + 1)
         // localStorage.setItem('hello', count + 1)
-        Axios.post('http://localhost:5000/', { notes: note })
+        Axios.post('https://note-be.herokuapp.com/', { notes: note })
         setNote("")
 
     }
@@ -26,7 +26,7 @@ function Form(Counter) {
     useEffect(() => {
         const getData = async () => {
             try {
-                let res = await Axios.get('http://localhost:5000/data')
+                let res = await Axios.get('https://note-be.herokuapp.com/data')
                 setData(res.data)
             }
             catch (err) {
@@ -55,7 +55,7 @@ function Form(Counter) {
                         <div className="mt-4 mb-4" style={{ maxWidth: "200px" }}>
                             <Link to={`/${i}`} target="_blank">
 
-                                <a key={i} href={`http://localhost:3000/${i}`} target="_blank" rel="noopener noreferrer">{`tiny.cc.${i}`}</a>
+                                <a key={i} href={`https://note-be.herokuapp.com/${i}`} target="_blank" rel="noopener noreferrer">{`tiny.cc.${i}`}</a>
 
                             </Link>
                         </div>

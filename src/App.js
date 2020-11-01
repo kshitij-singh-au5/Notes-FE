@@ -19,7 +19,7 @@ function App() {
 
     const getData = async () => {
       try {
-        let res = await Axios.get('http://localhost:5000/data')
+        let res = await Axios.get('https://note-be.herokuapp.com/data')
         setData(res.data)
 
       }
